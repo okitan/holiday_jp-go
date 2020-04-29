@@ -4,6 +4,6 @@
     "enabled": true
   },
   "postUpgradeTasks": {
-    "commands": ["bin/statik -src=./datasheet/holidays_detailed.yml"]
+    "commands": ["pwd && ls -l && bin/statik -src=./datasheet/holidays_detailed.yml"]
   }
 }
