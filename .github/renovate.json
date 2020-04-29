@@ -4,6 +4,6 @@
     "enabled": true
   },
   "postUpgradeTasks": {
-    "commands": ["/home/runner/go/bin/statik -src=./datasheet/holidays_detailed.yml"]
+    "commands": ["go get github.com/rakyll/statik && statik -src=./datasheet/holidays_detailed.yml"]
   }
 }
