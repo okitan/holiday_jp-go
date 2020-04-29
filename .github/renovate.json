@@ -5,6 +5,6 @@
   },
   "postUpgradeTasks": {
     "commands": ["/github/workspace/bin/statik -src datasheet/holidays_detailed.yml"],
-    "fileFilters": ["statik"]
+    "fileFilters": [".gitmodules", "statik/statik.go"]
   }
 }
