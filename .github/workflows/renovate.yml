@@ -20,7 +20,7 @@ jobs:
           curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
           dep ensure
       - name: Self-hosted Renovate
-          uses: renovatebot/github-action@v1.0.5
-          with:
-            configurationFile: .github/renovate-config.js
-            token: ${{ secrets.RENOVATE_TOKEN }}
+        uses: renovatebot/github-action@v1.0.5
+        with:
+          configurationFile: .github/renovate-config.js
+          token: ${{ secrets.RENOVATE_TOKEN }}
