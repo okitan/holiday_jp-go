@@ -9,6 +9,8 @@ on:
 
 jobs:
   renovate:
+    name: Renovate
+
     runs-on: ubuntu-latest
 
     steps:
