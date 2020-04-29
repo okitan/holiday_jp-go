@@ -1,6 +1,6 @@
 module.exports = {
   trustLevel: "high",
-  allowedPostUpgradeTasks: [".*"],
+  allowedPostUpgradeCommands: [".*"],
   onboarding: false,
   includeForks: true,
   platform: "github",
