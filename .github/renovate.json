@@ -4,6 +4,6 @@
     "enabled": true
   },
   "postUpgradeTasks": {
-    "commands": ["statik -src=./datasheet/holidays_detailed.yml"]
+    "commands": ["/home/runner/go/bin/statik -src=./datasheet/holidays_detailed.yml"]
   }
 }
