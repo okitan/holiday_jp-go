@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Get dependencies
         run: |
+          go get -v -t -d ./...
           curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
           dep ensure
       - name: Self-hosted Renovate
