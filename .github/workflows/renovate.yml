@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir -p bin
           go get github.com/rakyll/statik
-          mv $(which statik) /home/runner/work/_temp/_github_home
+          mv $(which statik) bin
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v1.0.5
         with:
