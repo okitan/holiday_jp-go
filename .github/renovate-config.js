@@ -5,6 +5,6 @@ module.exports = {
   includeForks: true,
   platform: "github",
   repositories: ["okitan/holiday_jp-go"],
-  // debug
-  logLevel: "trace",
+  // debug // trace is too big...
+  logLevel: "debug",
 };
