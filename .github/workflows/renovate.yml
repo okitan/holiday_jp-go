@@ -17,6 +17,11 @@ jobs:
           go-version: ^1.14
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Get dependencies
+        run: |
+          mkdir -p bin
+          go get github.com/rakyll/statik
+          mv $(which statik) bin
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v1.0.5
         with:

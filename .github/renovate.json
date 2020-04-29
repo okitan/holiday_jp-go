@@ -4,6 +4,6 @@
     "enabled": true
   },
   "postUpgradeTasks": {
-    "commands": ["mkdir -p $GOROOT && go get github.com/rakyll/statik && statik -src=./datasheet/holidays_detailed.yml"]
+    "commands": ["bin/statik -src=./datasheet/holidays_detailed.yml"]
   }
 }
