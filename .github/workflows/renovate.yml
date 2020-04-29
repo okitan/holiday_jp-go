@@ -1,8 +1,10 @@
 name: Renovate
 
 on:
-  schedule:
-    - cron: "0/15 * * * *"
+  push: # tmp
+    {}
+  # schedule:
+  #   - cron: "0/15 * * * *"
 
 jobs:
   renovate:
@@ -12,24 +14,12 @@ jobs:
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
         with:
-          go-version: ^1.13
+          go-version: ^1.14
       - name: Checkout
         uses: actions/checkout@v2
       - name: Get dependencies
         run: |
-          export GOPATH=$HOME/go
-          export GOBIN=$(go env GOPATH)/bin
-          export PATH=$PATH:$GOPATH
-          export PATH=$PATH:$GOBIN
-
-          mkdir -p $GOBIN
-          mkdir -p $GOPATH/src/github.com/$GITHUB_REPOSITORY
-          mv ./* $GOPATH/src/github.com/$GITHUB_REPOSITORY
-          cd $GOPATH/src/github.com/$GITHUB_REPOSITORY
-
-          go get -v -t -d ./...
-          curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-          dep ensure
+          go get github.com/rakyll/statik
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v1.0.5
         with:
