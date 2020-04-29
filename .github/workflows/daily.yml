@@ -1,11 +1,8 @@
-name: Renovate
+name: Daily
 
 on:
-  push: # tmp
-    branches:
-      - okitan
-  # schedule:
-  #   - cron: "0/15 * * * *"
+  schedule:
+    - cron: "0/15 * * * *" # now 15 minutes for debug
 
 jobs:
   renovate:

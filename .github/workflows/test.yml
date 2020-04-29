@@ -1,11 +1,11 @@
-name: Go
+name: Test
 
 on:
   push: {}
 
 jobs:
-  test:
-    name: Test
+  go:
+    name: Go
 
     runs-on: ubuntu-latest
 
@@ -28,6 +28,7 @@ jobs:
           mkdir -p $GOPATH/src/github.com/$GITHUB_REPOSITORY
           mv ./* $GOPATH/src/github.com/$GITHUB_REPOSITORY
           cd $GOPATH/src/github.com/$GITHUB_REPOSITORY
+
           go get -v -t -d ./...
           curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
           dep ensure
