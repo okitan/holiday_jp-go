@@ -2,7 +2,8 @@ name: Renovate
 
 on:
   push: # tmp
-    {}
+    branches:
+      - okitan
   # schedule:
   #   - cron: "0/15 * * * *"
 
