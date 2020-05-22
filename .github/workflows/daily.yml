@@ -2,7 +2,7 @@ name: Daily
 
 on:
   schedule:
-    - cron: "0/15 * * * *" # now 15 minutes for debug
+    - cron: "0 0 * * *"
 
 jobs:
   renovate:
