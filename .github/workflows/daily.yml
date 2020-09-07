@@ -23,7 +23,7 @@ jobs:
           go get github.com/rakyll/statik
           mv $(which statik) bin
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@v1.0.5
+        uses: renovatebot/github-action
         with:
           configurationFile: .github/renovate-config.js
           token: ${{ secrets.RENOVATE_TOKEN }}
